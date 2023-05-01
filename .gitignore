@@ -1,0 +1,46 @@
+# .gitignore for Next.js + TypeScript
+
+# Next.js build output
+.next/
+out/
+
+# Node.js dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+
+# Environment variables
+.env
+.env.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor generated files
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.sublime*
+*.iml
+.idea/
+*.iml.*
+*.pyc
+*.pyo
+*.pyd
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.out

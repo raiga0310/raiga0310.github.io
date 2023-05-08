@@ -1,16 +1,20 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { markdownToHtml } from '../lib/markdownToHtml';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import fs from 'fs';
 import path from 'path';
 
 export default function Skills({ html }: { html: string }) {
   return (
     <>
-      <Head>
-        <title>Skills</title>
-      </Head>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Head>
+            <title>My Profile</title>
+        </Head>
+        <NavBar />
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Footer />
     </>
   );
 }

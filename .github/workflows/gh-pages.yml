@@ -31,7 +31,7 @@ jobs:
               run: pnpm run build
             
             - name: Export
-              run: pnpm run export
+              run: pnpm run export && ls ./
             
             - name: Add nojekyll
               run: touch out/.nojekyll

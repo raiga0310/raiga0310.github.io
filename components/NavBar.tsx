@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Flex, Link, Circle } from '@chakra-ui/react';
+// components/NavBar.tsx
+import { Box, Flex, Link, Heading, useColorModeValue } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
@@ -7,26 +7,23 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   const isActive = router.pathname === href;
 
   return (
-    <Link href={href} position="relative" display="inline-block" py={3} px={5}>
-      {children}
-      {isActive && (
-        <Circle
-          position="absolute"
-          bottom="-4px"
-          left="50%"
-          transform="translateX(-50%)"
-          size="10px"
-          bg="red.500"
-        />
-      )}
+    <Link href={href} position="relative" display="inline-flex" alignItems="center" justifyContent="center" borderRadius="full">
+      <Box
+        padding="1"
+        borderRadius="full"
+        backgroundColor={isActive ? useColorModeValue('gray.200', 'gray.700') : 'transparent'}
+        transition="all 0.3s"
+      >
+        <Heading size="md">{children}</Heading>
+      </Box>
     </Link>
   );
 };
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   return (
-    <Box boxShadow="md" bg="gray.200">
-      <Flex alignItems="center" justifyContent="space-around">
+    <Box borderBottom="1px" borderColor="gray.200" py="2">
+      <Flex justifyContent="center">
         <NavLink href="/">Profile</NavLink>
         <NavLink href="/history">History</NavLink>
         <NavLink href="/skills">Skills</NavLink>

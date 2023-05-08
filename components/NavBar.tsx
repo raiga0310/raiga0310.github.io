@@ -5,10 +5,10 @@ const NavBar: React.FC = () => {
   return (
     <nav>
       <Link href="/">Profile</Link>
-      <Link href="/profile/history">History</Link>
-      <Link href="/profile/skills">Skills</Link>
-      <Link href="/profile/hobby">Hobby</Link>
-      <Link href="/profile/contact">Contact</Link>
+      <Link href="/history">History</Link>
+      <Link href="/skills">Skills</Link>
+      <Link href="/hobby">Hobby</Link>
+      <Link href="/contact">Contact</Link>
     </nav>
   );
 };

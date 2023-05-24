@@ -17,6 +17,7 @@ import {
     Divider, 
     Text
  } from "@chakra-ui/react";
+import { GoLinkExternal } from "react-icons/go";
 
  const components: Components = {
      h1: ({ node, ...props }) => <Heading as="h1" size="xl" {...props} />,
@@ -28,7 +29,7 @@ import {
      li: ({ node, ...props }) => <ListItem {...props} />,
      pre: ({ node, ...props }) => <Box as="pre" p="1rem" {...props} />,
      code: ({ node, ...props }) => <Code {...props} />,
-     a: ({ node, ...props }) => <Link color="teal.500" {...props} />,
+     a: ({ node, ...props }) => <Box ><Link color="teal.500" {...props} /><GoLinkExternal/></Box>,
      img: ({ node, ...props }) => <Image {...props} />,
      table: ({ node, ...props }) => <Table {...props} />,
      thead: ({ node, ...props }) => <Thead {...props} />,

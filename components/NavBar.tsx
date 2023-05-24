@@ -24,11 +24,11 @@ const NavBar = () => {
   return (
     <Box borderBottom="1px" borderColor="gray.200" py="2">
       <Flex justifyContent="center">
-        <NavLink href="/raiga0310.github.io">Profile</NavLink>
-        <NavLink href="/raiga0310.github.io/history">History</NavLink>
-        <NavLink href="/raiga0310.github.io/skills">Skills</NavLink>
-        <NavLink href="/raiga0310.github.io/hobby">Hobby</NavLink>
-        <NavLink href="/raiga0310.github.io/contact">Contact</NavLink>
+        <NavLink href="/">Profile</NavLink>
+        <NavLink href="/history">History</NavLink>
+        <NavLink href="/skills">Skills</NavLink>
+        <NavLink href="/hobby">Hobby</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
       </Flex>
     </Box>
   );

@@ -11,18 +11,19 @@ interface ProfileProps {
   markdown: string;
 }
 
-const Profile: React.FC<ProfileProps> = ({ markdown }: ProfileProps) => {
+export default function Profile({ markdown }: ProfileProps) {
+  console.log("rendering components...");
   return (
     <>
       <Head>
         <title>My Profile</title>
       </Head>
       <NavBar />
-      <MarkdownContent markdown={markdown}/>
+      <MarkdownContent markdown={markdown} />
       <Footer />
     </>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownPath = path.join(process.cwd(), "markdown", "profile.md");
@@ -44,5 +45,3 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   }
 };
-
-export default Profile;

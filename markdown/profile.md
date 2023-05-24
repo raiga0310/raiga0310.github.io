@@ -8,3 +8,5 @@
 - Birth: Aichi, Japan
 
 - department: Information Science and Engineering
+
+- belongs: [Approvers](https://Approvers.dev)

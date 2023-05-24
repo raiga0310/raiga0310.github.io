@@ -29,7 +29,7 @@ import { GoLinkExternal } from "react-icons/go";
      li: ({ node, ...props }) => <ListItem {...props} />,
      pre: ({ node, ...props }) => <Box as="pre" p="1rem" {...props} />,
      code: ({ node, ...props }) => <Code {...props} />,
-     a: ({ node, ...props }) => <Box ><Link color="teal.500" {...props} /><GoLinkExternal/></Box>,
+     a: ({ node, ...props }) => <><Link color="teal.500" {...props} /><GoLinkExternal/></>,
      img: ({ node, ...props }) => <Image {...props} />,
      table: ({ node, ...props }) => <Table {...props} />,
      thead: ({ node, ...props }) => <Thead {...props} />,

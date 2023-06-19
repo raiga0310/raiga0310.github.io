@@ -27,7 +27,7 @@ export default function Blogs({
                 <UnorderedList spacing={5}>
                     {blogLinks.map((blogLink) => (
                         <ListItem key={blogLink.id}>
-                            <Link href={`/blogs/${blogLink.id}`}>
+                            <Link href={`/${blogLink.id}`}>
                                 <Heading size="md">{blogLink.title}</Heading>
                             </Link>
                         </ListItem>

@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import url from "url";
 import path from "path";
 import fs from "fs";
 import Link from "next/link";
@@ -17,6 +18,7 @@ export default function Blogs({
 } : {
     blogLinks: BlogLinkProps[];
 }) {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     return (
         <>
             <Head>
@@ -25,13 +27,18 @@ export default function Blogs({
             <NavBar />
             <Container pt="5vh">
                 <UnorderedList spacing={5}>
-                    {blogLinks.map((blogLink) => (
+                    {blogLinks.map((blogLink) => {
+                        const link = `/blogs/${blogLink.id}`
+                        const parsedLink = url.parse(link);
+                        const href: string = parsedLink.pathname?.replace(basePath, "") || "";
+
+                        return (
                         <ListItem key={blogLink.id}>
-                            <Link href={`/blogs/${blogLink.id}`}>
+                            <Link href={href}>
                                 <Heading size="md">{blogLink.title}</Heading>
                             </Link>
                         </ListItem>
-                    ))}
+                    )})}
                 </UnorderedList>
             </Container>
             <Footer />

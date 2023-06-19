@@ -47,6 +47,6 @@ interface MarkdownContentProps {
 
 export default function MarkdownContent ({ markdown }: MarkdownContentProps) {
     return (
-        <Container ml={4}><ReactMarkdown components={components}>{ markdown }</ReactMarkdown></Container>
+        <Container ml={4} pb="8vh"><ReactMarkdown components={components}>{ markdown }</ReactMarkdown></Container>
     );
 };

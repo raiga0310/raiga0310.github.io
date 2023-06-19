@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import fs from 'fs';
 import path from 'path';
 import MarkdownContent from '../components/MarkdownContent';
+import { Container } from '@chakra-ui/react';
 
 export default function Hitstory({markdown}: {markdown: string}) {
   return (
@@ -13,7 +14,9 @@ export default function Hitstory({markdown}: {markdown: string}) {
       <title>My Profile</title>
     </Head>
     <NavBar />
-    <MarkdownContent markdown={markdown}/>
+    <Container>
+        <MarkdownContent markdown={markdown}/>
+    </Container>
     <Footer />
   </>
   );

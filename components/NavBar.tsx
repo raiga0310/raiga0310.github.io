@@ -27,6 +27,7 @@ const NavBar = () => {
         <NavLink href="/">Profile</NavLink>
         <NavLink href="/history">History</NavLink>
         <NavLink href="/skills">Skills</NavLink>
+        <NavLink href="/blogs">Blogs</NavLink>
         <NavLink href="/hobby">Hobby</NavLink>
         <NavLink href="/contact">Contact</NavLink>
       </Flex>

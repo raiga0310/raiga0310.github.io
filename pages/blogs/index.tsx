@@ -18,7 +18,6 @@ export default function Blogs({
 } : {
     blogLinks: BlogLinkProps[];
 }) {
-    const basePath = "/raiga0310.github.io";
     return (
         <>
             <Head>
@@ -29,12 +28,11 @@ export default function Blogs({
                 <UnorderedList spacing={5}>
                     {blogLinks.map((blogLink) => {
                         const link = `/blogs/${blogLink.id}`
-                        const parsedLink = url.parse(link);
-                        const href: string = parsedLink.pathname?.replace(basePath, "") || "";
+                        console.log(link)
 
                         return (
                         <ListItem key={blogLink.id}>
-                            <Link href={href}>
+                            <Link href={link}>
                                 <Heading size="md">{blogLink.title}</Heading>
                             </Link>
                         </ListItem>

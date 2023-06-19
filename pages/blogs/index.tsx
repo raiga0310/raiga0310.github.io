@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import url from "url";
 import path from "path";
 import fs from "fs";
-import Link from "next/link";
+import { Link } from "@chakra-ui/react";
 import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -28,7 +28,6 @@ export default function Blogs({
                 <UnorderedList spacing={5}>
                     {blogLinks.map((blogLink) => {
                         const link = `/blogs/${blogLink.id}`
-                        console.log(link)
 
                         return (
                         <ListItem key={blogLink.id}>

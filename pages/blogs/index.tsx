@@ -18,7 +18,7 @@ export default function Blogs({
 } : {
     blogLinks: BlogLinkProps[];
 }) {
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+    const basePath = "/raiga0310.github.io";
     return (
         <>
             <Head>

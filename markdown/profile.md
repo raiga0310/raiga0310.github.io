@@ -2,6 +2,8 @@
 
 ## Profiles
 
+Rustでバックエンドを書くのが好きな人間
+
 - Name: Raiga SASAYAMA
 - Age: 21
 - Birthday: 2003/03/10

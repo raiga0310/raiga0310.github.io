@@ -2,6 +2,8 @@
 
 ## like
 - Rust
+    - Axum
+    - wasm-bindgen
 - TypeScript
     - React
 - Docker

@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import url from "url";
 import path from "path";
 import fs from "fs";
 import { Link } from "@chakra-ui/react";
@@ -7,6 +6,7 @@ import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { Container, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
+import MarkdownContent from "../../components/MarkdownContent";
 
 type BlogLinkProps = {
     id: string;
@@ -14,9 +14,11 @@ type BlogLinkProps = {
 }
 
 export default function Blogs({
-    blogLinks
+    blogLinks,
+    markdown
 } : {
     blogLinks: BlogLinkProps[];
+    markdown: string;
 }) {
     return (
         <>
@@ -25,6 +27,7 @@ export default function Blogs({
             </Head>
             <NavBar />
             <Container pt="5vh">
+                <MarkdownContent text-align="center" markdown={markdown} />
                 <UnorderedList spacing={5}>
                     {blogLinks.map((blogLink) => {
                         const link = `/blogs/${blogLink.id}`
@@ -44,6 +47,11 @@ export default function Blogs({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+    // Get markdown content blogs.md
+    const markdownDirectory = path.join(process.cwd(), "markdown");
+    const markdownFilename = "blogs.md";
+    const markdownPath = path.join(markdownDirectory, markdownFilename);
+    const markdown = fs.readFileSync(markdownPath, "utf-8");
     const blogsDirectory = path.join(process.cwd(), "markdown", "blogs");
     const filenames = fs.readdirSync(blogsDirectory);
     const blogLinks = filenames.map((filename) => ({
@@ -52,7 +60,8 @@ export const getStaticProps: GetStaticProps = async () => {
     }));
     return {
         props: {
-            blogLinks
+            blogLinks,
+            markdown
         }
     }
 }

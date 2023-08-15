@@ -3,6 +3,7 @@
 ## like
 - Rust
     - Axum
+    - bevy
     - wasm-bindgen
 - TypeScript
     - React
@@ -21,3 +22,4 @@
 - Java
     - JSP
     - Tomcat
+- Python

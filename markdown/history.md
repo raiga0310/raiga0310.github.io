@@ -35,3 +35,8 @@
 ## 名古屋工業大学情報工学科知能情報分野編入
 [Webサイト](https://www.nitech.ac.jp/)
 2023年4月
+
+### インターン
+
+‐ 株式会社TrueData 4Days インターンシップ 機械学習コンペティション
+‐ 株式会社Chatwork 2Days Mobile Internship

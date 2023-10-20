@@ -36,7 +36,15 @@
 [Webサイト](https://www.nitech.ac.jp/)
 2023年4月
 
+### 校外活動
+‐ ハックツハッカソン ティラノカップ 株式会社インフォコム西日本 企業賞
+[ハッカソンサイト](https://cup.hackz.team/thranno)
+    - 作品名: ガベージコレクタ
+    - [Topa'z](https://topaz.dev/projects/50c8c6208a1e8e39e421)
+
+
 ### インターン
 
 ‐ 株式会社TrueData 4Days インターンシップ 機械学習コンペティション
 ‐ 株式会社Chatwork 2Days Mobile Internship
+- 株式会社PR TIMES 長期インターンシップ バックエンドエンジニア

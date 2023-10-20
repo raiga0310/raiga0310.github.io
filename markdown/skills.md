@@ -7,6 +7,7 @@
     - wasm-bindgen
 - TypeScript
     - React
+    ‐ Babylon.js
 - Docker
 - Git
 
